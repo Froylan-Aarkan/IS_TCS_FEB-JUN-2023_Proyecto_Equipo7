@@ -18,6 +18,11 @@ namespace FrontEnd.Vistas.TutoriasAcademicas
     /// <summary>
     /// Lógica de interacción para TutoriasAcademicas.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autores: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: Ventana de menu para la sección de tutorias académicas.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class TutoriasAcademicas : Window
     {        
         public TutoriasAcademicas()
@@ -31,11 +36,6 @@ namespace FrontEnd.Vistas.TutoriasAcademicas
             registrarComentarioGeneral.inicializarVentana(int.Parse(tbIdRolAcademico.Text), int.Parse(tbIdAcademico.Text));
             registrarComentarioGeneral.Show();
             this.Close();
-        }
-
-        private void btnRegistrarReporte_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btnRegistrarFechasSesion_Click(object sender, RoutedEventArgs e)

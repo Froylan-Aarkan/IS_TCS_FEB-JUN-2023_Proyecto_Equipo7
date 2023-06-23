@@ -20,6 +20,11 @@ namespace FrontEnd.Vistas.TutoriasAcademicas
     /// <summary>
     /// Lógica de interacción para RegistrarComentarioGeneral.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: Ventana para registrar un nuevo comentario general dentro del sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class RegistrarComentarioGeneral : Window
     {
         public RegistrarComentarioGeneral()

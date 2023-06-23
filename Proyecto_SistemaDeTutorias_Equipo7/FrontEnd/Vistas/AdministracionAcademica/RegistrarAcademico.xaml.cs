@@ -18,6 +18,11 @@ namespace FrontEnd.Vistas.AdministracionAcademica
     /// <summary>
     /// Lógica de interacción para RegistrarAcademico.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: Ventana para registrar un académico dentro del sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class RegistrarAcademico : Window
     {
         public RegistrarAcademico()

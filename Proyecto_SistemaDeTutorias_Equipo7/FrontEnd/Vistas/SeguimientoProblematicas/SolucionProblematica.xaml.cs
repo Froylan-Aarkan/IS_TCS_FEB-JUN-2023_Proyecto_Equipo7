@@ -18,6 +18,11 @@ namespace FrontEnd.Vistas.SeguimientoProblematicas
     /// <summary>
     /// Lógica de interacción para SolucionProblematica.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: Ventana para registrar la solución a la problematica academica seleccionada anteriormente.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class SolucionProblematica : Window
     {
         public SolucionProblematica()

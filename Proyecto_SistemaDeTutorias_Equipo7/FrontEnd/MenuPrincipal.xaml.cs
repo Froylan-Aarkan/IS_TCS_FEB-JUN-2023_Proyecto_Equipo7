@@ -22,6 +22,11 @@ namespace FrontEnd
     /// <summary>
     /// Lógica de interacción para MenuPrincipal.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: ventana del menu principal del sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class MenuPrincipal : Window
     {
         public MenuPrincipal()

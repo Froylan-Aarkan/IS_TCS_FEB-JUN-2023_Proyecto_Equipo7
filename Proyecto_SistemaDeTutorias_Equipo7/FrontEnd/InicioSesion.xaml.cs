@@ -20,6 +20,11 @@ namespace FrontEnd_SistemaDeTutorias
     /// Lógica de interacción para InicioSesion.xaml
     /// </summary>
 
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: Ventana de inicio de sesión para ingresar al sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
     public partial class InicioSesion : Window
     {
         public InicioSesion()

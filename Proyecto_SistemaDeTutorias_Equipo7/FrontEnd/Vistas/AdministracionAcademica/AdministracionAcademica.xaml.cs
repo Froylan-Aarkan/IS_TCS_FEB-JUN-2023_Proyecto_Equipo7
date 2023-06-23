@@ -18,6 +18,10 @@ namespace FrontEnd.Vistas.AdministracionAcademica
     /// Lógica de interacción para AdministracionAcademica.xaml
     /// </summary>
 
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: Ventana del menu de la sección de administración académica.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class AdministracionAcademica : Window
     {
         public AdministracionAcademica()

@@ -19,6 +19,11 @@ namespace FrontEnd.Vistas.SeguimientoProblematicas
     /// <summary>
     /// Lógica de interacción para RegistrarProblematicaAcademica.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: Ventana para registrar una nueva problematica académica dentro del sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class RegistrarProblematicaAcademica : Window
     {
         public RegistrarProblematicaAcademica()

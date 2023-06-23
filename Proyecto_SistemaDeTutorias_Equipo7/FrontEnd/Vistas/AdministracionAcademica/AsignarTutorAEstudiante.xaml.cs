@@ -20,6 +20,12 @@ namespace FrontEnd.Vistas.AdministracionAcademica
     /// <summary>
     /// Lógica de interacción para AsignarTutorAEstudiante.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autores: Froylan De Jesus Alvarez Rodriguez, Johan David Solis Hernandez
+-	Descripción: Ventana para asignar un tutor a un estudiante registrado en el sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    
     public partial class AsignarTutorAEstudiante : Window
     {
         public AsignarTutorAEstudiante()

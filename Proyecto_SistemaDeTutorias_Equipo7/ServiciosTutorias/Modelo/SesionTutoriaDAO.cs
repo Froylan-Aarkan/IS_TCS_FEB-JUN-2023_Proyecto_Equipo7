@@ -5,6 +5,10 @@ using System.Web;
 
 namespace ServiciosTutorias.Modelo
 {
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autores: Froylan De Jesus Alvarez Rodriguez, Johan David Solis Hernandez
+-	Descripción: Metodos para las operaciones que se realizaran en la base de datos que tengan que ver con las sesiones de tutoria.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public class SesionTutoriaDAO
     {
         public static int obtenerIdSesionTutoriaPorFechaSesion(DateTime fechaSesionActual)

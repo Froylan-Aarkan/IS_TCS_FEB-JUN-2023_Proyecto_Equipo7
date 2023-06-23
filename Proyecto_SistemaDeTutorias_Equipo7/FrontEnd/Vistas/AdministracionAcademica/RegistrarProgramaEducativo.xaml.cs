@@ -20,6 +20,11 @@ namespace FrontEnd.Vistas.AdministracionAcademica
     /// <summary>
     /// Lógica de interacción para RegistrarProgramaEducativo.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autores: Froylan De Jesus Alvarez Rodriguez, Johan David Solis Hernandez
+-	Descripción: Ventana para registrar un programa educativo nuevo dentro del sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class RegistrarProgramaEducativo : Window
     {
         public RegistrarProgramaEducativo()

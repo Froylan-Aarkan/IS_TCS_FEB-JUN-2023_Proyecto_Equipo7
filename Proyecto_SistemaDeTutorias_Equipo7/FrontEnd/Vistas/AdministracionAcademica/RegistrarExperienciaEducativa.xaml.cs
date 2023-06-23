@@ -18,6 +18,11 @@ namespace FrontEnd.Vistas.AdministracionAcademica
     /// <summary>
     /// Lógica de interacción para RegistrarExperienciaEducativa.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Johan David Solis Hernandez
+-	Descripción: Ventana para registrar una nueva experiencia educativa dentro del sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class RegistrarExperienciaEducativa : Window
     {
         public RegistrarExperienciaEducativa()

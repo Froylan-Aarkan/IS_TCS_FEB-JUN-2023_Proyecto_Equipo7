@@ -19,6 +19,11 @@ namespace FrontEnd.Vistas.TutoriasAcademicas
     /// <summary>
     /// Lógica de interacción para ModificarFechasCierreParaEntregaDeReporte.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Johan David Solis Hernandez
+-	Descripción: Ventana para modificar las fechas de sesion del periodo escolar seleccionado.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class ModificarFechasCierreParaEntregaDeReporte : Window
     {
         public ModificarFechasCierreParaEntregaDeReporte()

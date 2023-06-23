@@ -18,6 +18,11 @@ namespace FrontEnd.Vistas.TutoriasAcademicas
     /// <summary>
     /// Lógica de interacción para RegistrarFechasSesionTutoria.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Johan David Solis Hernandez
+-	Descripción: Ventana para registrar nuevas fechas de sesión de tutoria.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class RegistrarFechasSesionTutoria : Window
     {
         public RegistrarFechasSesionTutoria()

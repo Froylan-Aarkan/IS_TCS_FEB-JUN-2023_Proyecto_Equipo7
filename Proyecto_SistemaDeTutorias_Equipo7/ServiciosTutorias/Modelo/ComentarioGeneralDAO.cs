@@ -5,6 +5,10 @@ using System.Web;
 
 namespace ServiciosTutorias.Modelo
 {
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autores: Froylan De Jesus Alvarez Rodriguez, Johan David Solis Hernandez
+-	Descripción: Metodos para las operaciones que se realizaran en la base de datos que tengan que ver con los comentarios generales
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public class ComentarioGeneralDAO
     {
         public static bool registrarComentarioGeneral(ComentarioGeneral comentarioGeneralNuevo)
@@ -13,10 +17,6 @@ namespace ServiciosTutorias.Modelo
             {
                 DataClassesTutoriasBDDataContext conexionBD = ConexionBaseDatos.getConnection();
 
-                //int idSesionTutoriaActual = SesionTutoriaDAO.obtenerIdSesionTutoriaPorFechaSesion((DateTime)comentarioGeneralNuevo.fecha);
-
-                //if(idSesionTutoriaActual != -1)
-                //{
                     var comentarioGeneral = new ComentarioGeneral()
                     {
                         descripcion = comentarioGeneralNuevo.descripcion,
@@ -28,11 +28,6 @@ namespace ServiciosTutorias.Modelo
                     conexionBD.SubmitChanges();
 
                     return true;
-                //}
-                //else
-                //{
-                //    resultadoOperacion = false;
-                //}
             }
             catch (Exception ex)
             {

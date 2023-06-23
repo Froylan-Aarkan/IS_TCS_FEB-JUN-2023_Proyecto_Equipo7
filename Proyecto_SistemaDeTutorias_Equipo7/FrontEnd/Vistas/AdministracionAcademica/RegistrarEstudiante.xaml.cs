@@ -19,6 +19,11 @@ namespace FrontEnd.Vistas.AdministracionAcademica
     /// <summary>
     /// Lógica de interacción para RegistrarEstudiante.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Johan David Solis Hernandez
+-	Descripción: Ventana para registrar a un estudiante dentro del sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class RegistrarEstudiante : Window
     {
         public RegistrarEstudiante()

@@ -6,6 +6,10 @@ using System.Web;
 
 namespace ServiciosTutorias.Modelo
 {
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autores: Froylan De Jesus Alvarez Rodriguez, Johan David Solis Hernandez
+-	Descripción: Metodos para las operaciones que se realizaran en la base de datos que tengan que ver con los periodos escolares
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public class PeriodoEscolarDAO
     {
         public static PeriodoEscolar obtenerPeriodoEscolarPorId(int idPeriodoEscolar)

@@ -18,6 +18,11 @@ namespace FrontEnd.Vistas.TutoriasAcademicas
     /// <summary>
     /// Lógica de interacción para RegistrarFechasCierreParaEntregaDeReporte.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Johan David Solis Hernandez
+-	Descripción: Ventana para registrar fechas de cierre de entrega de reporte.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class RegistrarFechasCierreParaEntregaDeReporte : Window
     {
         public RegistrarFechasCierreParaEntregaDeReporte()

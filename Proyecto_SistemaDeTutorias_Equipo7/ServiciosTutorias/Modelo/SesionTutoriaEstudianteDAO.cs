@@ -5,6 +5,10 @@ using System.Web;
 
 namespace ServiciosTutorias.Modelo
 {
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autores: Froylan De Jesus Alvarez Rodriguez, Johan David Solis Hernandez
+-	Descripción: Metodos para las operaciones que se realizaran para asignar horario de sesion a los estuidantes
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public class SesionTutoriaEstudianteDAO
     {
         public static bool registrarHorarioSesion(SesionTutoria sesionTutoria, Estudiante estudiante, DateTime fechaHora)

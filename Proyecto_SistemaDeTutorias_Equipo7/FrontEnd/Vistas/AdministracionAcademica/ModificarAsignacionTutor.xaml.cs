@@ -19,6 +19,11 @@ namespace FrontEnd.Vistas.AdministracionAcademica
     /// <summary>
     /// Lógica de interacción para ModificarAsignacionTutor.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autores: Froylan De Jesus Alvarez Rodriguez, Johan David Solis Hernandez
+-	Descripción: Ventana para modificar la asignación de tutor a un estudiante registrado en el sistema.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class ModificarAsignacionTutor : Window
     {
         public ModificarAsignacionTutor()

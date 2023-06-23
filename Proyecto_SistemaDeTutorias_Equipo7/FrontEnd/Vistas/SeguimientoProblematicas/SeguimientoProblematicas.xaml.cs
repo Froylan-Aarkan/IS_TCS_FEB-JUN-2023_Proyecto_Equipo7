@@ -17,6 +17,11 @@ namespace FrontEnd.Vistas.SeguimientoProblematicas
     /// <summary>
     /// Lógica de interacción para SeguimientoProblematicas.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-   Autor: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: Ventana de menu de la sección de seguimiento de problematicas.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class SeguimientoProblematicas : Window
     {
         public SeguimientoProblematicas()

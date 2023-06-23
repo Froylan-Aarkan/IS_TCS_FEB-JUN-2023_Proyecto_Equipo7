@@ -22,6 +22,11 @@ namespace FrontEnd.Vistas.TutoriasAcademicas
     /// <summary>
     /// Lógica de interacción para RegistrarHorarioSesion.xaml
     /// </summary>
+
+    /*///////////////////////////////////////////////////////////////////////////////////////////////////////////
+-	Autor: Froylan De Jesus Alvarez Rodriguez
+-	Descripción: Ventana para asignar un horario de sesion de tutoria a los estudiantes del academico actual.
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
     public partial class RegistrarHorarioSesion : Window
     {
         public RegistrarHorarioSesion()
