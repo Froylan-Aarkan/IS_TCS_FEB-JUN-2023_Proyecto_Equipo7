@@ -1,0 +1,7 @@
+D:\Coding\.NET\C#\ProyectoTecnologias\Proyecto_SistemaDeTutorias_Equipo7\ServiciosTutorias\bin\ServiciosTutorias.dll.config
+D:\Coding\.NET\C#\ProyectoTecnologias\Proyecto_SistemaDeTutorias_Equipo7\ServiciosTutorias\bin\ServiciosTutorias.dll
+D:\Coding\.NET\C#\ProyectoTecnologias\Proyecto_SistemaDeTutorias_Equipo7\ServiciosTutorias\bin\ServiciosTutorias.pdb
+D:\Coding\.NET\C#\ProyectoTecnologias\Proyecto_SistemaDeTutorias_Equipo7\ServiciosTutorias\obj\Debug\ServiciosTutorias.csproj.AssemblyReference.cache
+D:\Coding\.NET\C#\ProyectoTecnologias\Proyecto_SistemaDeTutorias_Equipo7\ServiciosTutorias\obj\Debug\ServiciosTutorias.csproj.CoreCompileInputs.cache
+D:\Coding\.NET\C#\ProyectoTecnologias\Proyecto_SistemaDeTutorias_Equipo7\ServiciosTutorias\obj\Debug\ServiciosTutorias.dll
+D:\Coding\.NET\C#\ProyectoTecnologias\Proyecto_SistemaDeTutorias_Equipo7\ServiciosTutorias\obj\Debug\ServiciosTutorias.pdb

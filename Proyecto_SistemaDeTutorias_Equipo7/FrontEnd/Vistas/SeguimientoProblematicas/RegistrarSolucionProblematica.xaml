@@ -1,0 +1,29 @@
+﻿<Window x:Class="FrontEnd.Vistas.SeguimientoProblematicas.RegistrarSolucionProblematica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEnd.Vistas.SeguimientoProblematicas"
+        mc:Ignorable="d"
+        Title="Registrar Solucion Problematica" Height="800" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Registrar Solución a Problemática" VerticalAlignment="Top" FontSize="72" FontFamily="Trebuchet MS" Foreground="#FF005BAA" Margin="0,6,0,0"/>
+
+        <DataGrid x:Name="dgProblematicasAcademicas" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" Margin="159,66,167,176" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Fecha" Width="200" Binding="{Binding fecha}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Descripcion" Width="*" Binding="{Binding descripcion}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Seleccione el enlace de la problemática académica que desea registrar la solución"  Grid.Row="1" HorizontalAlignment="Left" Margin="159,35,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="BtnRegresar" Content="Regresar" Grid.Row="1" HorizontalAlignment="Left" Margin="913,571,0,0" VerticalAlignment="Top" Height="40" Width="200" Background="Red" Foreground="White" FontSize="18" BorderBrush="Red" Click="BtnRegresar_Click"/>
+        <Button x:Name="btnConsultar" Content="Consultar" Grid.Row="1" HorizontalAlignment="Left" Margin="159,571,0,0" VerticalAlignment="Top" Click="btnConsultar_Click" Height="40" Width="200" Background="#FF005BAA" Foreground="White" FontSize="18" BorderBrush="#FF005BAA"/>
+        <TextBlock x:Name="tbIdRolAcademico" HorizontalAlignment="Left" Margin="134,202,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Hidden"/>
+        <TextBlock x:Name="tbIdAcademico" HorizontalAlignment="Left" Margin="134,302,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Hidden" IsEnabled="False"/>
+    </Grid>
+</Window>

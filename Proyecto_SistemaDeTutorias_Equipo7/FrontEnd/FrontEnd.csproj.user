@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Vistas\AdministracionAcademica\AdministracionAcademica.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MenuPrincipal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\AdministracionAcademica\ModificarAsignacionTutor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\AdministracionAcademica\RegistrarAcademico.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\SeguimientoProblematicas\RegistrarProblematicaAcademica.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\SeguimientoProblematicas\SeguimientoProblematicas.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\TutoriasAcademicas\RegistrarComentarioGeneral.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\TutoriasAcademicas\RegistrarHorarioSesion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\TutoriasAcademicas\TutoriasAcademicas.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Vistas\AdministracionAcademica\AdministracionAcademica.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InicioSesion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MenuPrincipal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\AdministracionAcademica\ModificarAsignacionTutor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\AdministracionAcademica\RegistrarAcademico.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\SeguimientoProblematicas\RegistrarProblematicaAcademica.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\SeguimientoProblematicas\SeguimientoProblematicas.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\TutoriasAcademicas\RegistrarComentarioGeneral.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\TutoriasAcademicas\RegistrarHorarioSesion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\TutoriasAcademicas\TutoriasAcademicas.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

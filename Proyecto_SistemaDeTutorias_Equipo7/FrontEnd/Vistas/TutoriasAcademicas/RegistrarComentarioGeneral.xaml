@@ -1,0 +1,27 @@
+﻿<Window x:Class="FrontEnd.Vistas.TutoriasAcademicas.RegistrarComentarioGeneral"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEnd.Vistas.TutoriasAcademicas"
+        mc:Ignorable="d"
+        Title="Comentario General" Height="720" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Registrar Comentario General" VerticalAlignment="Top" FontSize="72" FontFamily="Trebuchet MS" Foreground="#FF005BAA" Margin="0,6,0,0"/>
+        <Button x:Name="btnCancelar" Grid.Row="1"  Height="40" Width="200" Content="Cancelar" HorizontalAlignment="Center" Margin="900,500,0,0" VerticalAlignment="Top" Background="Red" Foreground="White" FontSize="18" BorderBrush="Red" Click="btnCancelar_Click"/>
+        <Button x:Name="btnGuardar" Grid.Row="1"  Height="40" Width="200" Content="Guardar" HorizontalAlignment="Center" Margin="-900,500,0,0" VerticalAlignment="Top" Background="#FF005BAA" Foreground="White" FontSize="18" BorderBrush="#FF005BAA" Click="btnGuardar_Click"/>
+        <TextBox x:Name="tbFecha" HorizontalAlignment="Left" Width="140" Height="30" Margin="90,57,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18" IsEnabled="False"/>
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="90,23,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Descripción" HorizontalAlignment="Left" Margin="90,125,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="tbDescripcion" HorizontalAlignment="Center" Margin="0,165,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="1100" Height="293" FontSize="18"/>
+        <TextBlock x:Name="tbIdRolAcademico" HorizontalAlignment="Left" Margin="523,40,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label x:Name="lbDescripcionError" Content="" HorizontalAlignment="Left" Margin="90,458,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18" Foreground="Red"/>
+        <TextBlock x:Name="tbIdAcademico" HorizontalAlignment="Left" Margin="241,569,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Visible" IsEnabled="False"/>
+        
+    </Grid>
+</Window>

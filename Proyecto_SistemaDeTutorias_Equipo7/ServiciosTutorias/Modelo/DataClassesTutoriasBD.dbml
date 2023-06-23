@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TutoriasBD" Class="DataClassesTutoriasBDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Academico" Member="Academico">
+    <Type Name="Academico">
+      <Column Name="idAcademico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="numPersonal" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nombreCompleto" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="correoInstitucional" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="correoPersonal" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="contrasenia" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idProgramaEducativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Academico_AcademicoRolAcademico" Member="AcademicoRolAcademico" ThisKey="idAcademico" OtherKey="idAcademico" Type="AcademicoRolAcademico" />
+      <Association Name="Academico_Estudiante" Member="Estudiante" ThisKey="idAcademico" OtherKey="idAcademico" Type="Estudiante" />
+      <Association Name="Academico_ExperienciaEducativa" Member="ExperienciaEducativa" ThisKey="idAcademico" OtherKey="idAcademico" Type="ExperienciaEducativa" />
+      <Association Name="ProgramaEducativo_Academico" Member="ProgramaEducativo" ThisKey="idProgramaEducativo" OtherKey="idProgramaEducativo" Type="ProgramaEducativo" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AcademicoRolAcademico" Member="AcademicoRolAcademico">
+    <Type Name="AcademicoRolAcademico">
+      <Column Name="idAcademicoRolAcademico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idAcademico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idRolAcademico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Academico_AcademicoRolAcademico" Member="Academico" ThisKey="idAcademico" OtherKey="idAcademico" Type="Academico" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="RolAcademico_AcademicoRolAcademico" Member="RolAcademico" ThisKey="idRolAcademico" OtherKey="idRolAcademico" Type="RolAcademico" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CategoriaProblematica" Member="CategoriaProblematica">
+    <Type Name="CategoriaProblematica">
+      <Column Name="idCategoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Association Name="CategoriaProblematica_ProblematicaAcademica" Member="ProblematicaAcademica" ThisKey="idCategoria" OtherKey="idCategoria" Type="ProblematicaAcademica" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ComentarioGeneral" Member="ComentarioGeneral">
+    <Type Name="ComentarioGeneral">
+      <Column Name="idComentarioGeneral" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="idSesionTutoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SesionTutoria_ComentarioGeneral" Member="SesionTutoria" ThisKey="idSesionTutoria" OtherKey="idSesionTutoria" Type="SesionTutoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estudiante" Member="Estudiante">
+    <Type Name="Estudiante">
+      <Column Name="idEstudiante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="matricula" Type="System.String" DbType="NVarChar(9)" CanBeNull="true" />
+      <Column Name="nombreCompleto" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="correoPersonal" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="correoInstucional" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="idAcademico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Estudiante_SesionTutoriaEstudiante" Member="SesionTutoriaEstudiante" ThisKey="idEstudiante" OtherKey="idEstudiante" Type="SesionTutoriaEstudiante" />
+      <Association Name="Academico_Estudiante" Member="Academico" ThisKey="idAcademico" OtherKey="idAcademico" Type="Academico" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ExperienciaEducativa" Member="ExperienciaEducativa">
+    <Type Name="ExperienciaEducativa">
+      <Column Name="idEE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nrc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="idPeriodoEscolar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idProgramaEducativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idAcademico" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ExperienciaEducativa_ProblematicaAcademica" Member="ProblematicaAcademica" ThisKey="idEE" OtherKey="idEE" Type="ProblematicaAcademica" />
+      <Association Name="Academico_ExperienciaEducativa" Member="Academico" ThisKey="idAcademico" OtherKey="idAcademico" Type="Academico" IsForeignKey="true" />
+      <Association Name="PeriodoEscolar_ExperienciaEducativa" Member="PeriodoEscolar" ThisKey="idPeriodoEscolar" OtherKey="idPeriodoEscolar" Type="PeriodoEscolar" IsForeignKey="true" />
+      <Association Name="ProgramaEducativo_ExperienciaEducativa" Member="ProgramaEducativo" ThisKey="idProgramaEducativo" OtherKey="idProgramaEducativo" Type="ProgramaEducativo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PeriodoEscolar" Member="PeriodoEscolar">
+    <Type Name="PeriodoEscolar">
+      <Column Name="idPeriodoEscolar" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="fechaInicio" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fechaFin" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="PeriodoEscolar_ExperienciaEducativa" Member="ExperienciaEducativa" ThisKey="idPeriodoEscolar" OtherKey="idPeriodoEscolar" Type="ExperienciaEducativa" />
+      <Association Name="PeriodoEscolar_SesionTutoria" Member="SesionTutoria" ThisKey="idPeriodoEscolar" OtherKey="idPeriodoEscolar" Type="SesionTutoria" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProblematicaAcademica" Member="ProblematicaAcademica">
+    <Type Name="ProblematicaAcademica">
+      <Column Name="idProblematicaACademica" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="idSolucion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idCategoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idEE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ProblematicaAcademica_ReporteTutoria" Member="ReporteTutoria" ThisKey="idProblematicaACademica" OtherKey="idProblematicaAcademica" Type="ReporteTutoria" />
+      <Association Name="ProblematicaAcademica_SolucionProblematicaAcademica" Member="SolucionProblematicaAcademica1" ThisKey="idProblematicaACademica" OtherKey="idProblematicaAcademica" Type="SolucionProblematicaAcademica" />
+      <Association Name="CategoriaProblematica_ProblematicaAcademica" Member="CategoriaProblematica" ThisKey="idCategoria" OtherKey="idCategoria" Type="CategoriaProblematica" IsForeignKey="true" />
+      <Association Name="ExperienciaEducativa_ProblematicaAcademica" Member="ExperienciaEducativa" ThisKey="idEE" OtherKey="idEE" Type="ExperienciaEducativa" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="SolucionProblematicaAcademica_ProblematicaAcademica" Member="SolucionProblematicaAcademica" ThisKey="idSolucion" OtherKey="idSolucion" Type="SolucionProblematicaAcademica" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProgramaEducativo" Member="ProgramaEducativo">
+    <Type Name="ProgramaEducativo">
+      <Column Name="idProgramaEducativo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="ProgramaEducativo_Academico" Member="Academico" ThisKey="idProgramaEducativo" OtherKey="idProgramaEducativo" Type="Academico" />
+      <Association Name="ProgramaEducativo_ExperienciaEducativa" Member="ExperienciaEducativa" ThisKey="idProgramaEducativo" OtherKey="idProgramaEducativo" Type="ExperienciaEducativa" />
+      <Association Name="ProgramaEducativo_ReporteTutoria" Member="ReporteTutoria" ThisKey="idProgramaEducativo" OtherKey="idProgramaEducativo" Type="ReporteTutoria" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReporteGeneral" Member="ReporteGeneral">
+    <Type Name="ReporteGeneral">
+      <Column Name="idReporteGeneral" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="idReporteTutoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ReporteTutoria_ReporteGeneral" Member="ReporteTutoria" ThisKey="idReporteTutoria" OtherKey="idReporteTutoria" Type="ReporteTutoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReporteTutoria" Member="ReporteTutoria">
+    <Type Name="ReporteTutoria">
+      <Column Name="idReporteTutoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fechaEntrega" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="idSesionTutoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idProblematicaAcademica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idProgramaEducativo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="ReporteTutoria_ReporteGeneral" Member="ReporteGeneral" ThisKey="idReporteTutoria" OtherKey="idReporteTutoria" Type="ReporteGeneral" />
+      <Association Name="ProblematicaAcademica_ReporteTutoria" Member="ProblematicaAcademica" ThisKey="idProblematicaAcademica" OtherKey="idProblematicaACademica" Type="ProblematicaAcademica" IsForeignKey="true" />
+      <Association Name="ProgramaEducativo_ReporteTutoria" Member="ProgramaEducativo" ThisKey="idProgramaEducativo" OtherKey="idProgramaEducativo" Type="ProgramaEducativo" IsForeignKey="true" />
+      <Association Name="SesionTutoria_ReporteTutoria" Member="SesionTutoria" ThisKey="idSesionTutoria" OtherKey="idSesionTutoria" Type="SesionTutoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RolAcademico" Member="RolAcademico">
+    <Type Name="RolAcademico">
+      <Column Name="idRolAcademico" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="esTutor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="esCoordinador" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="esJeFeCarrera" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="esAdministrador" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="RolAcademico_AcademicoRolAcademico" Member="AcademicoRolAcademico" ThisKey="idRolAcademico" OtherKey="idRolAcademico" Type="AcademicoRolAcademico" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SesionTutoria" Member="SesionTutoria">
+    <Type Name="SesionTutoria">
+      <Column Name="idSesionTutoria" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="numSesion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fechaSesion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="idPeriodoEscolar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fechaLimite" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="SesionTutoria_ComentarioGeneral" Member="ComentarioGeneral" ThisKey="idSesionTutoria" OtherKey="idSesionTutoria" Type="ComentarioGeneral" />
+      <Association Name="SesionTutoria_ReporteTutoria" Member="ReporteTutoria" ThisKey="idSesionTutoria" OtherKey="idSesionTutoria" Type="ReporteTutoria" />
+      <Association Name="SesionTutoria_SesionTutoriaEstudiante" Member="SesionTutoriaEstudiante" ThisKey="idSesionTutoria" OtherKey="idSesionTutoria" Type="SesionTutoriaEstudiante" />
+      <Association Name="PeriodoEscolar_SesionTutoria" Member="PeriodoEscolar" ThisKey="idPeriodoEscolar" OtherKey="idPeriodoEscolar" Type="PeriodoEscolar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SolucionProblematicaAcademica" Member="SolucionProblematicaAcademica">
+    <Type Name="SolucionProblematicaAcademica">
+      <Column Name="idSolucion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="idProblematicaAcademica" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SolucionProblematicaAcademica_ProblematicaAcademica" Member="ProblematicaAcademica" ThisKey="idSolucion" OtherKey="idSolucion" Type="ProblematicaAcademica" />
+      <Association Name="ProblematicaAcademica_SolucionProblematicaAcademica" Member="ProblematicaAcademica1" ThisKey="idProblematicaAcademica" OtherKey="idProblematicaACademica" Type="ProblematicaAcademica" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SesionTutoriaEstudiante" Member="SesionTutoriaEstudiante">
+    <Type Name="SesionTutoriaEstudiante">
+      <Column Name="idSesionTutoriaEstudiante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idSesionTutoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idEstudiante" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="horario" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Association Name="Estudiante_SesionTutoriaEstudiante" Member="Estudiante" ThisKey="idEstudiante" OtherKey="idEstudiante" Type="Estudiante" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="SesionTutoria_SesionTutoriaEstudiante" Member="SesionTutoria" ThisKey="idSesionTutoria" OtherKey="idSesionTutoria" Type="SesionTutoria" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="FrontEnd.Vistas.AdministracionAcademica.RegistrarEstudiante"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEnd.Vistas.AdministracionAcademica"
+        mc:Ignorable="d"
+        Title="Registrar Estudiante" Height="510" Width="420" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Margin="43,93,0,0" VerticalAlignment="Top"/>
+        <Label Content="Matrícula:" HorizontalAlignment="Left" Margin="43,173,0,0" VerticalAlignment="Top"/>
+        <Label Content="Correo Personal:" HorizontalAlignment="Left" Margin="43,253,0,0" VerticalAlignment="Top"/>
+        <Label Content="Correo Institucional" HorizontalAlignment="Left" Margin="43,333,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbNombre" HorizontalAlignment="Center" Margin="0,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="333"/>
+        <TextBox x:Name="tbMatricula" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="333"/>
+        <TextBox x:Name="tbCorreoPersonal" HorizontalAlignment="Center" Margin="0,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="333"/>
+        <TextBox x:Name="tbCorreoInstitucional" HorizontalAlignment="Center" Margin="0,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="333"/>
+        <Button x:Name="btRegresar" Content="Regresar" HorizontalAlignment="Left" Margin="43,433,0,0" VerticalAlignment="Top" Width="90" Foreground="White" Background="Red" BorderBrush="Red" Click="btRegresar_Click"/>
+        <Button x:Name="btRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="286,433,0,0" VerticalAlignment="Top" Background="#FF005BAA" BorderBrush="#FF005BAA" Foreground="White" Width="90" Click="btRegistrar_Click"/>
+        <Label x:Name="lbNombre" Content="" HorizontalAlignment="Center" Margin="0,137,0,0" VerticalAlignment="Top" Foreground="Red" Width="334"/>
+        <Label x:Name="lbMatricula" Content="" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Foreground="Red" Width="334"/>
+        <Label x:Name="lbCorreoPersonal" Content="" HorizontalAlignment="Center" Margin="0,297,0,0" VerticalAlignment="Top" Foreground="Red" Width="334"/>
+        <Label x:Name="lbCorreoInstitucional" Content="" HorizontalAlignment="Center" Margin="0,377,0,0" VerticalAlignment="Top" Foreground="Red" Width="376"/>
+        <TextBlock x:Name="tbIdAcademico" HorizontalAlignment="Left" Margin="0,200,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Hidden" IsEnabled="False"/>
+        <TextBlock x:Name="tbIdRolAcademico" HorizontalAlignment="Left" Margin="0,220,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Label Content="Registrar Estudiante" HorizontalAlignment="Center" Margin="0,29,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Trebuchet MS" Foreground="#FF005BAA"/>
+    </Grid>
+</Window>

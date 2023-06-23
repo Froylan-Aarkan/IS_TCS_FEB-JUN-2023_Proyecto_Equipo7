@@ -1,0 +1,34 @@
+﻿<Window x:Class="FrontEnd.Vistas.TutoriasAcademicas.RegistrarHorarioSesion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FrontEnd.Vistas.TutoriasAcademicas"
+        mc:Ignorable="d"
+        Title="Horario Sesión" Height="470" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" Text="Registrar Horario de sesión" VerticalAlignment="Top" FontSize="72" FontFamily="Trebuchet MS" Foreground="#FF005BAA" Margin="0,6,0,0"/>
+        <ComboBox x:Name="cbEstudiante" HorizontalAlignment="Left" Margin="90,60,0,0" Grid.Row="1" VerticalAlignment="Top" Width="500" FontSize="18"/>
+        <Label Content="Estudiante" HorizontalAlignment="Left" Margin="90,21,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="tbFecha" HorizontalAlignment="Left" Width="140" Height="30" Margin="686,60,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18" IsEnabled="False"/>
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="686,21,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="tbSesion" HorizontalAlignment="Left" Width="140" Height="30" Margin="1050,60,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18" IsEnabled="False"/>
+        <Label Content="Sesión" HorizontalAlignment="Left" Margin="1050,26,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="btnCancelar" Grid.Row="1"  Height="40" Width="200" Content="Cancelar" HorizontalAlignment="Left" Margin="990,252,0,0" VerticalAlignment="Top" Background="Red" Foreground="White" FontSize="18" BorderBrush="Red" Click="btnCancelar_Click"/>
+        <Button x:Name="btnGuardar" Grid.Row="1"  Height="40" Width="200" Content="Guardar" HorizontalAlignment="Left" Margin="90,252,0,0" VerticalAlignment="Top" Background="#FF005BAA" Foreground="White" FontSize="18" BorderBrush="#FF005BAA" Click="btnGuardar_Click"/>
+        <Label Content="Hora" HorizontalAlignment="Left" Margin="90,136,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cbHora" HorizontalAlignment="Left" Margin="90,175,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" FontSize="18"/>
+        <Label x:Name="lbEstudianteError" Content="" HorizontalAlignment="Left" Margin="90,93,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18" Foreground="Red"/>
+        <Label x:Name="lbHoraError" Content="" HorizontalAlignment="Left" Margin="90,205,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="18" Foreground="Red"/>
+        <TextBlock x:Name="tbIdRolAcademico" HorizontalAlignment="Left" Margin="576,272,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Hidden" IsEnabled="False"/>
+  
+        <TextBlock x:Name="tbIdSesionTutoria" HorizontalAlignment="Left" Margin="809,272,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Visibility="Hidden"/>
+        <TextBox x:Name="tbIdAcademico" HorizontalAlignment="Left" Margin="640,292,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden" Text=""/>
+
+    </Grid>
+</Window>
